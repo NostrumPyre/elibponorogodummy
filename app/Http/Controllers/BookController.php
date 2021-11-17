@@ -16,4 +16,11 @@ class BookController extends Controller
     {
         return view('books.create');
     }
+
+    public function download($uuid)
+    {
+        $book = Book::where('uuid', $uuid)->firstOrFail();
+        $pathToFile = storage_path('app/books/' . $book->cover);
+        return response()->download($pathToFile);
+    }
 }
