@@ -10,4 +10,9 @@ class CommunityController extends Controller
     {
         return view('community.main');
     }
+
+    public function viewDetail()
+    {
+        return view('community.details');
+    }
 }
