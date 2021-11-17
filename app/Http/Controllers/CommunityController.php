@@ -8,7 +8,7 @@ class CommunityController extends Controller
 {
     public function viewLandingPage()
     {
-        return view('community.main');
+        return view('community.landingPage');
     }
 
     public function viewDetail()
