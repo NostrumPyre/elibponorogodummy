@@ -18,7 +18,7 @@ use App\Http\Controllers\FileController;
 
 
 Route::get('/view', [FileController::class, 'index']);
-Route::get('get/{filename}', 'FileController@getFile')->name('getfile');
+Route::get('get/{filename}', [FileController::class, 'getFile']);
 
 Route::get('/', [CommunityController::class, 'viewLandingPage']);
 Route::get('/book/1', [CommunityController::class, 'viewDetail'])->name('detail');;
