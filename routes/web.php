@@ -3,7 +3,7 @@
 use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\StaffController;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\DownloadFileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
+Route::get('/', [DownloadFileController::class, 'index']);
+Route::get('get/{file_name}', [DownloadFileController::class, 'downloadFile']);
 Route::get('/', [CommunityController::class, 'viewLandingPage']);
 Route::get('/book/1', [CommunityController::class, 'viewDetail'])->name('detail');;
 
