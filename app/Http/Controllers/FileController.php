@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use File;
 use Illuminate\Support\Facades\Storage;
 use Response;
 use Illuminate\Http\Request;
