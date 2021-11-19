@@ -13,13 +13,13 @@ class BookController extends Controller
     }
     public function store(Request $request)
     {
-        $this->validate($request, ['book' => 'required|image']);
-        if ($request->hasfile('image')) {
-            $file = $request->file('image');
+        $this->validate($request, ['book' => 'required|book']);
+        if ($request->hasfile('book')) {
+            $file = $request->file('book');
             $name = time() . $file->getClientOriginalName();
-            $filePath = 'images/' . $name;
+            $filePath = 'books/' . $name;
             Storage::disk('s3')->put($filePath, file_get_contents($file));
-            return back()->with('success', 'Image Uploaded successfully');
+            return back()->with('success', 'Book Uploaded successfully');
         }
     }
 }
