@@ -9,7 +9,7 @@ class BookController extends Controller
 {
     public function index()
     {
-        return view('upload');
+        return view('book');
     }
     public function store(Request $request)
     {
