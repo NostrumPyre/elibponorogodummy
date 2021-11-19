@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <p class="card-text mt-3">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a class="btn btn-primary mt-5" href="/downloadFile/{{$response['id']}}" style="background-color: #008000; border: #008000">Download</a>
+                        <a class="btn btn-primary mt-5" href="/downloadFile" style="background-color: #008000; border: #008000">Download</a>
                     </div>
                 </div>
             </div>
