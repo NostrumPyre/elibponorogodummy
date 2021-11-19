@@ -16,8 +16,8 @@ class DownloadFileController extends Controller
 
     public function index(Request $request)
     {
-        $id = 1;
-        $attachment = Book::find($id);
+        $uuid = 1;
+        $attachment = Book::find($uuid);
 
         $headers = [
 
