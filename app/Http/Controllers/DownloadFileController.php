@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Storage;
-use App\Models\Image;
+use App\Models\Book;
 
 
 
@@ -17,11 +17,11 @@ class DownloadFileController extends Controller
     public function index(Request $request)
     {
         $id = 1;
-        $attachment = Image::find($id);
+        $attachment = Book::find($id);
 
         $headers = [
 
-            'Content-Type'        => 'application/jpeg',
+            'Content-Type'        => 'application/pdf',
 
             'Content-Disposition' => 'attachment; filename="' . $attachment->name . '"',
 

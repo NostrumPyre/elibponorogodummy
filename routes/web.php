@@ -4,6 +4,7 @@ use App\Http\Controllers\CommunityController;
 use App\Http\Controllers\StaffController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DownloadFileController;
+use App\Http\Controllers\BookController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,10 +18,10 @@ use App\Http\Controllers\DownloadFileController;
 
 
 
-Route::get('/upload', 'BookController@index');
+Route::get('/upload', [BookController::class, 'index']);
 Route::resource('books', 'BookController', ['only' => ['store', 'destroy']]);
 
-Route::get('/download', [DownloadFileController::class, 'index']);
+Route::get('download', [DownloadFileController::class, 'index']);
 
 Route::get('/', [CommunityController::class, 'viewLandingPage']);
 Route::get('/book/1', [CommunityController::class, 'viewDetail'])->name('detail');;
