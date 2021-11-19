@@ -21,7 +21,7 @@ use App\Http\Controllers\BookController;
 Route::get('/upload', [BookController::class, 'index']);
 Route::resource('books', 'BookController', ['only' => ['store', 'destroy']]);
 
-Route::get('download', [DownloadFileController::class, 'index']);
+Route::post('/downloadFile/{mediaId}', 'DownloadFileController@downloadFile');
 
 Route::get('/', [CommunityController::class, 'viewLandingPage']);
 Route::get('/book/1', [CommunityController::class, 'viewDetail'])->name('detail');;
