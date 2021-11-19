@@ -7,7 +7,10 @@ use Illuminate\Support\Facades\Storage;
 
 class BookController extends Controller
 {
-
+    public function index()
+    {
+        return view('book');
+    }
     public function store(Request $request)
     {
         $this->validate($request, ['book' => 'required|image']);
