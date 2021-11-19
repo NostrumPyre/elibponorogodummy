@@ -9,39 +9,17 @@ class BookController extends Controller
 {
     public function index()
     {
-        $url = 'https://s3.' . env('AWS_DEFAULT_REGION') . '.amazonaws.com/' . env('AWS_BUCKET') . '/';
-        $books = [];
-        $files = Storage::disk('s3')->files('books');
-        foreach ($files as $file) {
-            $books[] = [
-                'name' => str_replace('books/', '', $file),
-                'src' => $url . $file
-            ];
-        }
-
-        return view('welcome', compact('books'));
+        return view('book');
     }
-
     public function store(Request $request)
     {
-        $this->validate($request, [
-            'book' => 'required|book|max:2048'
-        ]);
-
-        if ($request->hasFile('book')) {
-            $file = $request->file('book');
+        $this->validate($request, ['book' => 'required|image']);
+        if ($request->hasfile('image')) {
+            $file = $request->file('image');
             $name = time() . $file->getClientOriginalName();
-            $filePath = 'books/' . $name;
+            $filePath = 'images/' . $name;
             Storage::disk('s3')->put($filePath, file_get_contents($file));
+            return back()->with('success', 'Image Uploaded successfully');
         }
-
-        return back()->withSuccess('Book uploaded successfully');
-    }
-
-    public function destroy($book)
-    {
-        Storage::disk('s3')->delete('books/' . $book);
-
-        return back()->withSuccess('Book was deleted successfully');
     }
 }
