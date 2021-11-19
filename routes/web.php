@@ -17,9 +17,10 @@ use App\Http\Controllers\DownloadFileController;
 
 
 
+Route::get('/upload', 'BookController@index');
+Route::resource('books', 'BookController', ['only' => ['store', 'destroy']]);
 
-
-Route::get('/file-download', [DownloadFileController::class, 'index'])->name('file.download.index');
+Route::get('/download', [DownloadFileController::class, 'index']);
 
 Route::get('/', [CommunityController::class, 'viewLandingPage']);
 Route::get('/book/1', [CommunityController::class, 'viewDetail'])->name('detail');;

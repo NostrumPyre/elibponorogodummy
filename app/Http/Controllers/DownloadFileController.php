@@ -3,25 +3,30 @@
 
 namespace App\Http\Controllers;
 
-
 use Illuminate\Http\Request;
+use Storage;
+use App\Models\Image;
+
+
 
 
 class DownloadFileController extends Controller
 
 {
 
-    public function index()
-
+    public function index(Request $request)
     {
+        $id = 1;
+        $attachment = Image::find($id);
 
-        $filePath = public_path("dummy.pdf");
+        $headers = [
 
-        $headers = ['Content-Type: application/pdf'];
+            'Content-Type'        => 'application/jpeg',
 
-        $fileName = time() . '.pdf';
+            'Content-Disposition' => 'attachment; filename="' . $attachment->name . '"',
 
+        ];
 
-        return response()->download($filePath, $fileName, $headers);
+        return \Response::make(Storage::disk('s3')->get($attachment->url), 200, $headers);
     }
 }
