@@ -9,7 +9,7 @@ class BookController extends Controller
 {
     public function index()
     {
-        return view('book');
+        return view('staff.book');
     }
     public function store(Request $request)
     {
