@@ -18,7 +18,7 @@ use App\Http\Controllers\BookController;
 
 
 
-Route::get('book', [BookController::class, 'index']);
+Route::get('upload', [BookController::class, 'index']);
 Route::post('store', [BookController::class, 'store']);
 
 Route::post('/downloadFile', 'DownloadFileController@downloadFile');
