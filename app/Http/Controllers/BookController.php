@@ -13,7 +13,7 @@ class BookController extends Controller
     }
     public function store(Request $request)
     {
-        $this->validate($request, ['book' => 'required|book']);
+        $this->validate($request, ['book' => 'required|mimes:pdf']);
         if ($request->hasfile('book')) {
             $file = $request->file('book');
             $name = time() . $file->getClientOriginalName();
