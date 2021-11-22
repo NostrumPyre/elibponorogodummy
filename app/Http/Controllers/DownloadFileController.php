@@ -12,14 +12,11 @@ use Illuminate\Support\Facades\Storage;
 class DownloadFileController extends Controller
 
 {
-    public function index()
-    {
-        return view('community.details');
-    }
+
     public function downloadFile(Request $request)
     {
 
-        $filePath = 'books/';
+        $filePath = 'books/1637349857AA MidTerm Template.pdf';
 
 
         $headers = [
