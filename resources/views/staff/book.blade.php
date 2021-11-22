@@ -13,7 +13,7 @@
 
 <body>
     <div class="container">
-        <h2>Upload image amazon aws s3 bucket laravel - Laratutorials.com</h2><br />
+        <h2>Upload book</h2><br />
         @if (\Session::has('success'))
         <div class="alert alert-success">
             <p>{{ \Session::get('success') }}</p>

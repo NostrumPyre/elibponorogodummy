@@ -16,16 +16,13 @@ class DownloadFileController extends Controller
 
     public function downloadFile(Request $request)
     {
-        $uuid = 1;
-        $attachment = Book::find($uuid);
-
-        $headers = [
-
-            'Content-Type'        => 'application/pdf',
-
-            'Content-Disposition' => 'attachment; filename="' . $attachment->name . '"',
-
-        ];
+        $this->validate($request, ['book' => 'required|mimes:pdf']);
+        if ($request->hasfile('book')) {
+            $file = $request->file('book');
+            $name = time() . $file->getClientOriginalName();
+            $filePath = 'books/' . $name;
+            Storage::disk('s3')->put($filePath, file_get_contents($file));
+            return back()->with('success', 'Book Uploaded successfully');
 
         return \Response::make(Storage::disk('s3')->get($attachment->url), 200, $headers);
     }
