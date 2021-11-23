@@ -16,7 +16,7 @@ class DownloadFileController extends Controller
     public function downloadFile(Request $request)
     {
 
-        $filePath = 'books/1637349857AA MidTerm Template.pdf';
+        $filePath = 'books/' . $request->File_Upload;
 
 
         $headers = [
