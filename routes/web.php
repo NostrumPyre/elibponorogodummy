@@ -33,7 +33,7 @@ Route::get('/project-guidance', function () {
     return view('project-guidance');
 });
 
-Route::get('testDB', function () {
+Route::get('/testDB', function () {
 
     $books = DB::table('book')->get();
 
