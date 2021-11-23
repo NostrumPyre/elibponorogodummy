@@ -32,3 +32,10 @@ Route::get('/admin', [StaffController::class, 'viewLandingPage']);
 Route::get('/project-guidance', function () {
     return view('project-guidance');
 });
+
+Route::get('testDB', function () {
+
+    $books = DB::table('book')->get();
+
+    return view('community.details', ['books' => $books]);
+});
