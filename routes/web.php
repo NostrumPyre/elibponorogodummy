@@ -21,7 +21,7 @@ use App\Http\Controllers\BookController;
 Route::get('book', [BookController::class, 'index']);
 Route::post('store', [BookController::class, 'store']);
 
-Route::get('downloadFile', [DownloadFileController::class, 'downloadFile'])->name('download');
+Route::get('abcd', [DownloadFileController::class, 'downloadFile'])->name('download');
 
 
 Route::get('/', [CommunityController::class, 'viewLandingPage']);
