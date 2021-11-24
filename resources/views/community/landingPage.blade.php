@@ -65,7 +65,7 @@
                         <div class="card m-2 bg-light" style="width: 15rem;">
                             <img src="https://covers.zlibcdn2.com/covers299/books/83/8c/c6/838cc6ac8cb0d8ddb98fdb1ae0c8a443.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <a href="{{ route('detail') }}" class="text-decoration-none text-reset">
+                                <a href="/Samplebook" class="text-decoration-none text-reset">
                                     <h5 class="card-title">Clean Code</h5>
                                 </a>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -74,7 +74,7 @@
                         <div class="card m-2 bg-light" style="width: 15rem;">
                             <img src="https://covers.zlibcdn2.com/covers299/books/83/8c/c6/838cc6ac8cb0d8ddb98fdb1ae0c8a443.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <a href="{{ route('detail') }}" class="text-decoration-none text-reset">
+                                <a href="/Samplebook" class="text-decoration-none text-reset">
                                     <h5 class="card-title">Clean Code</h5>
                                 </a>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -92,7 +92,7 @@
                         <div class="card m-2 bg-light" style="width: 15rem;">
                             <img src="https://covers.zlibcdn2.com/covers299/books/83/8c/c6/838cc6ac8cb0d8ddb98fdb1ae0c8a443.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <a href="{{ route('detail') }}" class="text-decoration-none text-reset">
+                                <a href="/Samplebook" class="text-decoration-none text-reset">
                                     <h5 class="card-title">Clean Code</h5>
                                 </a>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -101,7 +101,7 @@
                         <div class="card m-2 bg-light" style="width: 15rem;">
                             <img src="https://covers.zlibcdn2.com/covers299/books/83/8c/c6/838cc6ac8cb0d8ddb98fdb1ae0c8a443.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <a href="{{ route('detail') }}" class="text-decoration-none text-reset">
+                                <a href="/Samplebook" class="text-decoration-none text-reset">
                                     <h5 class="card-title">Clean Code</h5>
                                 </a>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
