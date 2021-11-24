@@ -28,8 +28,8 @@
 
 
           @foreach($journals as $key => $data)
-          <div class="row">
-            <div class="col col-sm-4 mt-5">
+          <div class="row mt-5">
+            <div class="col col-sm-4 ">
               <img src="https://drive.google.com/uc?export=view&id=1kaOdo0gexiT6Xj0cyLq4rIE0fpBdD2KR" class="card-img-top " alt="...">
             </div>
             <div class="col text-start m-4 " style="color: #212529">
