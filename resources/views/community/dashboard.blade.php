@@ -1,38 +1,30 @@
-@extends('community.BookmarkMaster')
-@section('content')
-<div class="container-fluid main-container dashboard">
-    <div id="wrapper" class="">
-        <div id="sidebar-wrapper">
+@extends('community.main')
 
-            <ul class="sidebar-nav">
-                <li class="sidebar-section-title">
-                    <p class="text-uppercase">Visibility</p>
-                <li>
-                    <a class="visibility-filter all-bookmarks selected" href="#">
-                        <i class="fa fa-file-text-o"></i>
-                        <span class="filter-name">All</span>
-
-                    </a>
-                </li>
-                <li>
-                    <a class="visibility-filter public-bookmarks" href="#">
-                        <i class="fa fa-file-text-o"></i>
-                        <span class="filter-name">Public</span>
-
-                    </a>
-                </li>
-                <li>
-                    <a class="visibility-filter my-bookmarks" href="#">
-                        <i class="fa fa-file-text-o"></i>
-                        <span class="filter-name">Private</span>
-
-                    </a>
-                </li>
-            </ul>
-
+<header class="masthead pt-5 pb-5">
+  <div class="container position-relative">
+    <div class="row justify-content-center">
+      <div class="text-center text-white d-flex justify-content-center">
+        @foreach($books as $key => $data)
+        <div class="row p-5 bg-light rounded" style="width: 960px !important; margin-top: 30px; margin-bottom:30px;">
+          <h1>Collection</h1>
+          <div class="col col-sm-4">
+            <img src="https://covers.zlibcdn2.com/covers299/books/83/8c/c6/838cc6ac8cb0d8ddb98fdb1ae0c8a443.jpg" class="card-img-top" alt="...">
+          </div>
+          <div class="col text-start m-4 " style="color: #212529">
+            <div class="row">
+              <div class="col">
+                <h3 class="card-title">{{$data->title}}</h3>
+              </div>
+              <div class="col me-0 text-end">
+                <i class="bi bi-bookmark-fill" style="font-size: 25px;" name="bookmark-fill"></i>
+              </div>
+            </div>
+            <p class="card-text mt-3">{{$data->description}}</p>
+            <a class="btn btn-primary mt-5" href="{{route('download', ["File_Upload" => "$data->filepath"])}}" style="background-color: #008000; border: #008000">Download</a>
+          </div>
         </div>
-
+        @endforeach
+      </div>
     </div>
-</div>
-
-@endsection
+  </div>
+</header>
