@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class BController extends Controller
+class ManageBookmarkController extends Controller
 {
     public function viewBookmark()
     {
