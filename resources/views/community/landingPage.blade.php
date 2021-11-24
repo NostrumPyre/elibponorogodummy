@@ -66,7 +66,7 @@
                         <div class="card m-2 bg-light" style="width: 15rem;">
                             <img src="{{$data->coverpath}}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <a href="/Samplebook" class="text-decoration-none text-reset">
+                                <a href="/book/1" class="text-decoration-none text-reset">
                                     <h5 class="card-title">{{$data->title}}</h5>
                                 </a>
                                 <p class="card-text">{{$data->description}}</p>
@@ -77,7 +77,7 @@
                         <div class="card m-2 bg-light" style="width: 15rem;">
                             <img src="{{$data->coverpath}}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <a href="/Samplebook" class="text-decoration-none text-reset">
+                                <a href="/journal/1" class="text-decoration-none text-reset">
                                     <h5 class="card-title">{{$data->title}}</h5>
                                 </a>
                                 <p class="card-text">{{$data->description}}</p>

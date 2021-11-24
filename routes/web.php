@@ -38,7 +38,23 @@ Route::get('/', function () {
 
 // Route::get('/book/1', [CommunityController::class, 'viewDetail'])->name('detail');;
 
-Route::get('/book/1', [CommunityController::class, 'viewDetail'])->name('detail');;
+Route::get('/book/1', [CommunityController::class, 'viewDetail'])->name('detail');
+
+Route::get('/book/1', function () {
+
+    $books = DB::table('book')->get();
+    $journals = DB::table('journal')->get();
+
+    return view('community.details', ['resource' => $books]);
+});
+
+Route::get('/journal/1', function () {
+
+    $books = DB::table('book')->get();
+    $journals = DB::table('journal')->get();
+
+    return view('community.details', ['resource' => $journals]);
+});
 
 Route::get('/admin', [StaffController::class, 'viewLandingPage']);
 
