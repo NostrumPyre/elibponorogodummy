@@ -25,7 +25,19 @@ Route::post('store', [BookController::class, 'store']);
 Route::get('download', [DownloadFileController::class, 'downloadFile'])->name('download');
 
 
-Route::get('/', [CommunityController::class, 'viewLandingPage']);
+// Route::get('/', [CommunityController::class, 'viewLandingPage']);
+
+Route::get('/', function () {
+
+    $books = DB::table('book')->get();
+    $journals = DB::table('journal')->get();
+
+    return view('community.landingPage', ['books' => $books], ['journals' => $journals]);
+});
+
+
+// Route::get('/book/1', [CommunityController::class, 'viewDetail'])->name('detail');;
+
 Route::get('/book/1', [CommunityController::class, 'viewDetail'])->name('detail');;
 
 Route::get('/admin', [StaffController::class, 'viewLandingPage']);
