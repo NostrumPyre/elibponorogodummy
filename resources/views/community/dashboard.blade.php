@@ -53,7 +53,7 @@
                 <h3 class="card-title">{{$data->title}}</h3>
               </div>
               <div class="col me-0 text-end">
-                <button onclick="bookmarkFunction2()"><i id="bookmarkIcon2" class="bi bi-bookmark-fill" style="font-size: 25px;" name="bookmark-fill"></i></button>
+                <a onclick="bookmarkFunction2()"><i id="bookmarkIcon2" class="bi bi-bookmark-fill" style="font-size: 25px;" name="bookmark-fill"></i></a>
               </div>
               <script>
                 function bookmarkFunction2() {
