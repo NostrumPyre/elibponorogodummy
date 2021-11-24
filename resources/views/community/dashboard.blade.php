@@ -18,10 +18,10 @@
                 <h3 class="card-title">{{$data->title}}</h3>
               </div>
               <div class="col me-0 text-end">
-                <button id="bookmarkState"> <i id="bookmarkIcon" class="bi bi-bookmark-fill" style="font-size: 25px;" name="bookmark-fill"></i> </button>
+                <button onclick="bookmarkFunction()" id="bookmarkState"> <i id="bookmarkIcon" class="bi bi-bookmark-fill" style="font-size: 25px;" name="bookmark-fill"></i> </button>
               </div>
               <script>
-                $('#bookmarkState').click(function() {
+                function bookmarkFunction() {
                   if (document.getElementById('bookmarkIcon').classList.contains("bi-bookmark-fill")) {
                     document.getElementById('bookmarkIcon').classList.remove("bi-bookmark-fill");
                     document.getElementById('bookmarkIcon').classList.add("bi-bookmark");
@@ -31,7 +31,7 @@
                     document.getElementById('bookmarkIcon').classList.add("bi-bookmark-fill");
                   }
 
-                });
+                };
               </script>
             </div>
             <p class="card-text mt-3">{{$data->description}}</p>
