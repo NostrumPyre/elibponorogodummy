@@ -42,7 +42,7 @@ Route::get('Samplebook', function () {
 });
 
 
-Route::get('/bookmark', function () {
+Route::get('/collection', function () {
 
     $books = DB::table('book')->get();
     $journals = DB::table('journal')->get();
