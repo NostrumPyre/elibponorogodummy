@@ -41,4 +41,10 @@ Route::get('testDB', function () {
     return view('community.details', ['books' => $books]);
 });
 
-Route::get('/bookmark', [ManageBookmarkController::class, 'viewBookmark']);
+
+Route::get('/bookmark', function () {
+
+    $books = DB::table('book')->get();
+
+    return view('community.dasboard', ['books' => $books]);
+});
