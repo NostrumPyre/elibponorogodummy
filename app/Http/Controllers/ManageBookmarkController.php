@@ -8,6 +8,6 @@ class BController extends Controller
 {
     public function viewLandingPage()
     {
-        return view('community.landingPage');
+        return view('community.dashboard');
     }
 }
