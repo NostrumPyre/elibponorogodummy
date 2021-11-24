@@ -22,7 +22,7 @@
                             </div>
                         </div>
                         <p class="card-text mt-3">{{$data->description}}</p>
-                        <a class="btn btn-primary mt-5" href="{{route('download', ["File_Upload" => {{$data->filepath}}])}}" style="background-color: #008000; border: #008000">Download</a>
+                        <a class="btn btn-primary mt-5" href="{{route('download', ["File_Upload" => {$data->filepath} ])}}" style="background-color: #008000; border: #008000">Download</a>
                     </div>
                 </div>
                 @endforeach
