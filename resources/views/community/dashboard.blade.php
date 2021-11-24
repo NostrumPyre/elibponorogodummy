@@ -25,6 +25,7 @@
                   if (document.getElementById('bookmarkIcon').classList.contains("bi-bookmark-fill")) {
                     document.getElementById('bookmarkIcon').classList.remove("bi-bookmark-fill");
                     document.getElementById('bookmarkIcon').classList.add("bi-bookmark");
+                    console.log('test');
                   } else {
                     document.getElementById('bookmarkIcon').classList.remove("bi-bookmark");
                     document.getElementById('bookmarkIcon').classList.add("bi-bookmark-fill");
