@@ -46,5 +46,5 @@ Route::get('/bookmark', function () {
 
     $books = DB::table('book')->get();
 
-    return view('community.dasboard', ['books' => $books]);
+    return view('community.dashboard', ['books' => $books]);
 });
