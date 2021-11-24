@@ -1,0 +1,209 @@
+/* general */
+html, body {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+body {
+    overflow-y: visible;
+}
+.navbar-brand .fa-bookmark {
+    margin-right: 10px;
+}
+.account .fa-sign-out {
+    margin-right: 10px;
+}
+.dashboard .navbar {
+    margin-bottom: 0;
+}
+.main-container {
+    margin-top: 85px;
+}
+.main-container.dashboard {
+    margin-top: 65px;
+}
+.user-message {
+    padding: 15px;
+}
+
+/* boostrap overrides */
+.list-group-item:last-child {
+    border-radius: 0;
+}
+.list-group-item:first-child {
+    border-radius: 0;
+}
+
+/* taggit overrides - overqualified to avoid !important */
+span.ui-helper-hidden-accessible {
+    display: none;
+}
+ul.tagit {
+    padding: 0;
+}
+ul.tagit li.tagit-choice::after {
+    content: ",";
+}
+ul.tagit li.tagit-choice-editable {
+    padding: 0;
+}
+ul.tagit li.tagit-new {
+    padding: 2px;
+    margin: 0;
+}
+ul.tagit-autocomplete {
+    padding-left: 0;
+    z-index: 9999;
+}
+span.tagit-label {
+    display: inline;
+    border: 1px solid #CCC;
+    padding: 5px 12px;
+    border-radius: 3px;
+    margin-right: 2px;
+    font-size: 1.2em;
+}
+ul.tagit-autocomplete li.ui-menu-item {
+    list-style-type: none;
+    display: inline;
+    border: 1px solid rgb(204, 204, 204);
+    padding: 6px 14px;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-size: 1.2em;
+    background-color: #FFF;
+    z-index: 9999;
+}
+ul.tagit-autocomplete li.ui-menu-item:first-child {
+    margin-left: 0;
+}
+
+/* sidebar */
+#sidebar-wrapper {
+    overflow: hidden;
+}
+.sidebar-nav {
+    position: relative;
+}
+.sidebar-section-title {
+    color: #FFF;
+}
+.sidebar-nav .selected {
+    text-decoration: none;
+    color: #FFF;
+    background: rgba(255, 255, 255, 0.2) none repeat scroll 0% 0%;
+}
+.sidebar-nav .filter-count,
+.sidebar-nav .tag-count {
+    float: right;
+    margin-right: 35px;
+}
+.sidebar-nav .tag-list {
+    overflow-y: auto;
+}
+.sidebar-nav .fa {
+    margin-right: 10px;
+}
+
+/* bookmarks */
+.bookmark-list .created-by,
+.bookmark-list .url {
+    margin-bottom: 0;
+}
+.bookmark-list .tags-list {
+    margin-top: 10px;
+    margin-left: 0;
+    margin-bottom: 0;
+}
+.bookmark-list .fa-tag {
+    margin-right: 2px;
+}
+.bookmark-list .tag::after {
+    content: ",";
+}
+.bookmark-list .tag:last-child::after {
+    content: "";
+}
+.bookmark-list .private-status {
+    margin-left: 0.3em;
+    top: 16px;
+    position: absolute;
+    right: 0;
+}
+.bookmark-list .fa-lock {
+    right: 8px;
+}
+.bookmark-list .update-button,
+.bookmark-list .delete-button {
+    border:none;
+    background: none;
+}
+.bookmark-list .update-form,
+.bookmark-list .delete-form {
+    margin-left: 0.3em;
+    bottom: 10px;
+    position: absolute;
+    right: 0;
+    
+}
+.bookmark-list .update-form {
+    right: 30px;
+}
+.bookmark-list .delete-form {
+    color: rgb(203, 85, 85);
+}
+.bookmark-item .name {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.bookmark-item .url{
+    overflow: hidden;
+}
+
+/* search */
+.search {
+    list-style-type: none;
+    padding: 0;
+    margin-right: 35px;
+}
+.search .search-filter {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 20px;
+    margin-bottom: 25px;
+}
+
+/* new/update bookmark form */
+.new-bookmark-container,
+.update-bookmark-container {
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.new-bookmark-subcontainer,
+.update-bookmark-subcontainer {
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 3px;
+    padding: 20px;
+    position: relative;
+    top: 75px;
+    background-color: #FFF;
+    box-shadow: 0 0 8px rgb(204, 204, 204);
+    max-width: 650px;
+    margin: 0 auto;
+    width: 100%;
+}
+.new-bookmark-subcontainer .bookmark-form #name,
+.new-bookmark-subcontainer .bookmark-form #url,
+.update-bookmark-subcontainer .bookmark-form #name,
+.update-bookmark-subcontainer .bookmark-form #url
+{
+    padding-left: 2px;
+}
+.new-bookmark-subcontainer .bookmark-form .cancel,
+.update-bookmark-subcontainer .bookmark-form .cancel
+{
+    margin-left: 10px;
+}
