@@ -10,7 +10,7 @@
           <h1>Collection</h1>
           @foreach($books as $key => $data)
           <div class="col col-sm-4">
-            <img src="{{Storage::disk('s3')->url('s3://elibbucket/Cover/cover 1.png')}}" class="card-img-top" alt="...">
+            <img src="https://drive.google.com/uc?export=view&id=14r5VEmUBjaVOYQgJ8sZrRXRTLK15YJvv" class="card-img-top" alt="...">
           </div>
           <div class="col text-start m-4 " style="color: #212529">
             <div class="row">
@@ -28,7 +28,7 @@
 
           @foreach($journals as $key => $data)
           <div class="col col-sm-4">
-            <img src="{{Storage::disk('s3')->url('Cover/cover 2.png')}}" class="card-img-top" alt="...">
+            <img src="https://drive.google.com/uc?export=view&id=1kaOdo0gexiT6Xj0cyLq4rIE0fpBdD2KR" class="card-img-top" alt="...">
           </div>
           <div class="col text-start m-4 " style="color: #212529">
             <div class="row">
