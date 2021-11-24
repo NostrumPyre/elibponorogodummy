@@ -64,7 +64,7 @@
                     <div class="d-flex flex-wrap justify-content-center">
                         @foreach($books as $key => $data)
                         <div class="card m-2 bg-light" style="width: 15rem;">
-                            <img src="{{$data->coverpage}}" class="card-img-top" alt="...">
+                            <img src="{{$data->coverpath}}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <a href="/Samplebook" class="text-decoration-none text-reset">
                                     <h5 class="card-title">{{$data->title}}</h5>
@@ -75,7 +75,7 @@
                         @endforeach
                         @foreach($journals as $key => $data)
                         <div class="card m-2 bg-light" style="width: 15rem;">
-                            <img src="{{$data->coverpage}}" class="card-img-top" alt="...">
+                            <img src="{{$data->coverpath}}" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <a href="/Samplebook" class="text-decoration-none text-reset">
                                     <h5 class="card-title">{{$data->title}}</h5>
