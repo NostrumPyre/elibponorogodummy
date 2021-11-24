@@ -8,6 +8,9 @@ class ManageBookmarkController extends Controller
 {
     public function viewBookmark()
     {
-        return view('community.dashboard');
+        $books = DB::table('book')->get();
+
+
+        return view('community.dashboard', ['books' => $books]);
     }
 }
