@@ -12,12 +12,12 @@
     <link href="{{ asset('assets/vendor/tag-it/css/jquery.tagit.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/fontawesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/vendor/animate-css/animate.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/app/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/style.css') }}" rel="stylesheet">
     <script src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/jquery-ui/jquery-ui.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/vendor/tag-it/js/tag-it.min.js') }}"></script>
-    <script src="{{ asset('assets/app/script.js') }}"></script>
+    <script src="{{ asset('assets/script.js') }}"></script>
 </head>
 
 <body {{ Request::is('dashboard') ? 'class="dashboard"' : ""}}>
