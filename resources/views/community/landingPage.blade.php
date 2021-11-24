@@ -73,7 +73,7 @@
                             </div>
                         </div>
                         @endforeach
-                        @foreach($journal as $key => $data)
+                        @foreach($journals as $key => $data)
                         <div class="card m-2 bg-light" style="width: 15rem;">
                             <img src="{{$data->coverpage}}" class="card-img-top" alt="...">
                             <div class="card-body">

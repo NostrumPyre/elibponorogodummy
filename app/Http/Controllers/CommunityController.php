@@ -8,7 +8,10 @@ class CommunityController extends Controller
 {
     public function viewLandingPage()
     {
-        return view('community.landingPage');
+        $books = DB::table('book')->get();
+        $journals = DB::table('journal')->get();
+
+        return view('community.landingPage', ['books' => $books], ['journals' => $journals]);
     }
 
     public function viewDetail()

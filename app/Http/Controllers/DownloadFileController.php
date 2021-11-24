@@ -20,7 +20,7 @@ class DownloadFileController extends Controller
 
 
         $headers = [
-            'Content-Type'        => 'application/pdf',
+            'Content-Type' => 'application/pdf',
 
         ];
 
