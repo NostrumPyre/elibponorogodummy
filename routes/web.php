@@ -5,6 +5,7 @@ use App\Http\Controllers\StaffController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DownloadFileController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\ManageBookmarkController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -39,3 +40,5 @@ Route::get('testDB', function () {
 
     return view('community.details', ['books' => $books]);
 });
+
+Route::get('/bookmark', [ManageBookmarkController::class, 'viewBookmark']);

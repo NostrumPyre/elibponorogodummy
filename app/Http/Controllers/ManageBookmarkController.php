@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class BController extends Controller
 {
-    public function viewLandingPage()
+    public function viewBookmark()
     {
         return view('community.dashboard');
     }
