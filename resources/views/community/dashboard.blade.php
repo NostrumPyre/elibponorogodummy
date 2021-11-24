@@ -18,7 +18,7 @@
                 <h3 class="card-title">{{$data->title}}</h3>
               </div>
               <div class="col me-0 text-end">
-                <a id="bookmarkState"> <i id="bookmarkIcon" class="bi bi-bookmark-fill" style="font-size: 25px;" name="bookmark-fill"></i> </a>
+                <button id="bookmarkState"> <i id="bookmarkIcon" class="bi bi-bookmark-fill" style="font-size: 25px;" name="bookmark-fill"></i> </button>
               </div>
               <script>
                 $('#bookmarkState').click(function() {
@@ -52,7 +52,7 @@
                 <h3 class="card-title">{{$data->title}}</h3>
               </div>
               <div class="col me-0 text-end">
-                <a id="bookmarkState2"><i id="bookmarkIcon2" class="bi bi-bookmark-fill" style="font-size: 25px;" name="bookmark-fill"></i></a>
+                <button id="bookmarkState2"><i id="bookmarkIcon2" class="bi bi-bookmark-fill" style="font-size: 25px;" name="bookmark-fill"></i></button>
               </div>
               <script>
                 $('#bookmarkState2').click(function() {
