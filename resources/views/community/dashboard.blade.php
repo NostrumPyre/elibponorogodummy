@@ -34,6 +34,5 @@
 
     </div>
 </div>
-<!-- @include('layouts.new-bookmark') -->
-<!-- @include('layouts.update-bookmark') -->
+
 @endsection
