@@ -34,7 +34,7 @@ Route::get('/project-guidance', function () {
     return view('project-guidance');
 });
 
-Route::get('testDB', function () {
+Route::get('Samplebook', function () {
 
     $books = DB::table('book')->get();
 
@@ -45,6 +45,7 @@ Route::get('testDB', function () {
 Route::get('/bookmark', function () {
 
     $books = DB::table('book')->get();
+    $journals = DB::table('journal')->get();
 
-    return view('community.dashboard', ['books' => $books]);
+    return view('community.dashboard', ['books' => $books], ['journals' => $journals]);
 });
