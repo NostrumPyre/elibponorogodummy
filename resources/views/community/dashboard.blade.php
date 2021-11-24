@@ -7,7 +7,7 @@
       <div class="text-center text-white d-flex justify-content-center">
 
         <div class="text-center row p-5 bg-light rounded" style="width: 960px !important; margin-top: 30px; margin-bottom:30px;">
-          <h1 style="color: #212529">Book Collection</h1>
+          <h1 style="color: #212529">Book Collection</h1> <br>
           @foreach($books as $key => $data)
           <div class="col col-sm-4">
             <img src="https://drive.google.com/uc?export=view&id=14r5VEmUBjaVOYQgJ8sZrRXRTLK15YJvv" class="card-img-top" alt="...">
@@ -30,7 +30,7 @@
 
         @foreach($journals as $key => $data)
         <div class="text-center row p-5 bg-light rounded" style="width: 960px !important; margin-top: 30px; margin-bottom:30px;">
-          <h1 style="color: #212529">Journal Collection</h1>
+          <h1 style="color: #212529">Journal Collection</h1> <br>
           <div class="col col-sm-4 ">
             <img src="https://drive.google.com/uc?export=view&id=1kaOdo0gexiT6Xj0cyLq4rIE0fpBdD2KR" class="card-img-top " alt="...">
           </div>
