@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('community.BookmarkMaster')
 @section('content')
 <div class="container-fluid main-container dashboard">
     <div id="wrapper" class="">
@@ -34,6 +34,6 @@
 
     </div>
 </div>
-@include('layouts.new-bookmark')
-@include('layouts.update-bookmark')
+<!-- @include('layouts.new-bookmark') -->
+<!-- @include('layouts.update-bookmark') -->
 @endsection
