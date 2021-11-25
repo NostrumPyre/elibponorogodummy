@@ -7,10 +7,10 @@
     <div class="container position-relative">
         <div class="row justify-content-center">
             <div class="text-center text-white d-flex justify-content-center">
-                @foreach($books as $key => $data)
+                @foreach($resource as $key => $data)
                 <div class="row p-5 bg-light rounded" style="width: 960px !important; margin-top: 30px; margin-bottom:30px;">
                     <div class="col col-sm-4">
-                        <img src="https://covers.zlibcdn2.com/covers299/books/83/8c/c6/838cc6ac8cb0d8ddb98fdb1ae0c8a443.jpg" class="card-img-top" alt="...">
+                        <img src="{{$data->coverpath}}" class="card-img-top" alt="...">
                     </div>
                     <div class="col text-start m-4 " style="color: #212529">
                         <div class="row">

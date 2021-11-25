@@ -62,24 +62,28 @@
                         <h4>NEW RELEASES</h4>
                     </div>
                     <div class="d-flex flex-wrap justify-content-center">
+                        @foreach($books as $key => $data)
                         <div class="card m-2 bg-light" style="width: 15rem;">
-                            <img src="https://covers.zlibcdn2.com/covers299/books/83/8c/c6/838cc6ac8cb0d8ddb98fdb1ae0c8a443.jpg" class="card-img-top" alt="...">
+                            <img src="{{$data->coverpath}}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <a href="/Samplebook" class="text-decoration-none text-reset">
-                                    <h5 class="card-title">Clean Code</h5>
+                                <a href="/book/1" class="text-decoration-none text-reset">
+                                    <h5 class="card-title">{{$data->title}}</h5>
                                 </a>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text">{{$data->description}}</p>
                             </div>
                         </div>
+                        @endforeach
+                        @foreach($journals as $key => $data)
                         <div class="card m-2 bg-light" style="width: 15rem;">
-                            <img src="https://covers.zlibcdn2.com/covers299/books/83/8c/c6/838cc6ac8cb0d8ddb98fdb1ae0c8a443.jpg" class="card-img-top" alt="...">
+                            <img src="{{$data->coverpath}}" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <a href="/Samplebook" class="text-decoration-none text-reset">
-                                    <h5 class="card-title">Clean Code</h5>
+                                <a href="/journal/1" class="text-decoration-none text-reset">
+                                    <h5 class="card-title">{{$data->title}}</h5>
                                 </a>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text">{{$data->description}}</p>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
